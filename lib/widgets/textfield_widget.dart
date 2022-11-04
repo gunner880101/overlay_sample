@@ -18,10 +18,6 @@ class _TextFieldWidgetState extends State<TextFieldWidget> {
     super.initState();
     controller = TextEditingController();
 
-    WidgetsFlutterBinding.ensureInitialized().addPostFrameCallback((_) {
-      showOverlay();
-    });
-
     focusNode.addListener(() {
       if (focusNode.hasFocus) {
         showOverlay();
